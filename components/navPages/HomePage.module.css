@@ -3,14 +3,8 @@
   border-color: #e9fffd;
   color: #252525;
   padding-bottom: 220px;
-  padding-top: 220px;
+  padding-top: 200px;
   width: 100%;
-  /*
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  */
 }
 .homePageContainer {
   width: 100%;
@@ -33,7 +27,7 @@
   text-transform: none;
 }
 .homePageButton {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   text-align: center;
 }
 .homePageButton a {
@@ -45,6 +39,7 @@
   padding: 15px 40px;
   max-width: 100%;
 }
+
 
 @media (max-width: 990px) {
   .homePageButton a {
