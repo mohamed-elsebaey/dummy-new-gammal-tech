@@ -1,5 +1,5 @@
 .headerSection {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 10px 0 6px;
@@ -96,5 +96,8 @@ nav .menu span {
   .header ul a:active,
   .header ul a.active {
     color: #f4ece7;
+  }
+  .header a{
+    width: 25%;
   }
 }
