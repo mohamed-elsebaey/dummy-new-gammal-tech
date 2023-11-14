@@ -21,7 +21,10 @@ function MainNavigation() {
             <span></span>
             <span></span>
           </div>
-          <ul className={menuOpen ? classes.open : ""}>
+          <ul
+            className={menuOpen ? classes.open : ""}
+            onClick={changShowHandler}
+          >
             <li>
               <Link href="/courses">Courses</Link>
             </li>
@@ -34,7 +37,9 @@ function MainNavigation() {
             <li>
               <Link href="/contact">Contact</Link>
             </li>
-            <Button>Sign in</Button>
+            <li>
+              <Button>Sign in</Button>
+            </li>
           </ul>
         </nav>
       </div>
