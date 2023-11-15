@@ -12,7 +12,7 @@ function MainNavigation() {
   return (
     <section className={classes.headerSection}>
       <div className={classes.header}>
-        <Link href="/">
+        <Link href="/" onClick={menuOpen?changShowHandler:''}>
           <GammalTechLogo />
         </Link>
         <nav>
