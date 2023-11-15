@@ -2,11 +2,11 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
   padding: 10px 0 6px;
   background-color: #094546;
   border-color: #094546;
   color: #f4ece7;
-  z-index: 1;
   border-bottom: 2px solid #f4ece7;
 }
 .header {

@@ -7,23 +7,20 @@
   border-style: solid;
   border-width: 2px;
   font-weight: 500;
-  line-height: 1.60;
+  line-height: 1.6;
   font-size: 1.05rem;
   cursor: pointer;
   white-space: nowrap;
 }
-@media (max-width: 990px){
+@media (max-width: 990px) {
   .btn {
-    
+    width: 100%;
     background-color: transparent;
     border-color: transparent;
-    color: #FF914C;
+    color: #ff914c;
     text-align: center;
-
   }
-  .btn:hover{
+  .btn:hover {
     color: #f4ece7;
   }
 }
-
-

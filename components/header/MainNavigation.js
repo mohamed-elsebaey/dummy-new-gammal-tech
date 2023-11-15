@@ -37,9 +37,7 @@ function MainNavigation() {
             <li>
               <Link href="/contact">Contact</Link>
             </li>
-            <li>
-              <Button>Sign in</Button>
-            </li>
+            <Button>Sign in</Button>
           </ul>
         </nav>
       </div>
