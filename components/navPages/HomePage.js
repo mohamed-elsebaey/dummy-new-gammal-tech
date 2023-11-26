@@ -6,7 +6,7 @@ function HomePage() {
       <div className={classes.homePageContainer}>
         <h1>Welcome to the New Gammal Tech!</h1>
         <div className={classes.homePageButton}>
-          <Link href="https://new.gammal.tech/home">Visit the homepage</Link>
+          <Link href="">Visit the homepage</Link>
         </div>
       </div>
     </section>
