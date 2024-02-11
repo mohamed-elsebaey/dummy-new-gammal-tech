@@ -1,98 +1,151 @@
+import React from "react";
+import Image from "next/image";
+import Logo from "../../public/assets/logo/logoFooter.png";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
-import classes from "./Footer.module.css";
 
-import GammalTechLogo from "../header/GammalTechLogo";
-
-import {
-  FaFacebookF,
-  FaTiktok,
-  FaLinkedinIn,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-} from "react-icons/fa";
-
-function Footer() {
+const FooterLinks = [
+  {
+    title: "Home",
+    link: "",
+  },
+  {
+    title: "About",
+    link: "/about",
+  },
+  {
+    title: "Products",
+    link: "",
+  },
+  {
+    title: "Services",
+    link: "",
+  },
+];
+const HelpLinks = [
+  {
+    title: "Customer Support",
+    link: "",
+  },
+  {
+    title: "Delivery Details",
+    link: "",
+  },
+  {
+    title: "Terms & Conditions",
+    link: "",
+  },
+  {
+    title: "Privacy Policy",
+    link: "",
+  },
+];
+const ResourcesLinks = [
+  {
+    title: "Free Ebooks",
+    link: "",
+  },
+  {
+    title: "How To Blog",
+    link: "",
+  },
+  {
+    title: "Subscribe TCJ",
+    link: "",
+  },
+];
+const Footer = () => {
   return (
-    <section className={classes.footerSection}>
-      <div className={classes.container}>
-        <div className={classes.footer1}>
-          <div className={classes.footer1A}>
-            <Link href="/">
-              <GammalTechLogo />
+    <div className="bg-bgGrayColor text-white">
+      <section className="container py-10">
+        <div className=" grid md:grid-cols-3">
+          {/* company Details */}
+          <div className=" py-8 px-4 ">
+            <Link href="">
+              <Image
+                src={Logo}
+                alt="Logo"
+                className="w-56 hover:scale-105 duration-300"
+              />
             </Link>
-            <div className={classes.footer1AText}>
-              We are an online educational platform that capitalizes on human
-              potential by assisting professionals and aspiring individuals to
-              succeed in their goals.
+            <p className="text-md mt-7">Contact Us</p>
+            {/* Social Handle */}
+            <div className="flex items-center gap-4 mt-6">
+              <Link href="">
+                <FaInstagram className="text-2xl hover:text-blueColor duration-300" />
+              </Link>
+              <Link href="">
+                <FaFacebook className="text-2xl hover:text-blueColor duration-300" />
+              </Link>
+              <Link href="">
+                <FaLinkedin className="text-2xl hover:text-blueColor duration-300" />
+              </Link>
             </div>
           </div>
-          <div className={classes.footer1B}>
-            <Link href="/">
-              <h3>1. Featured links</h3>
-            </Link>
-            <ul>
-              <li>
-                <div>Home</div>
-              </li>
-              <li>
-                <div>Contact us</div>
-              </li>
-              <li>
-                <div>Courses</div>
-              </li>
-              <li>
-                <div>Terms &amp; Conditions</div>
-              </li>
-              <li>
-                <div>About us</div>
-              </li>
-              <li>
-                <div>Privacy Policy</div>
-              </li>
-            </ul>
-          </div>
-          <div className={classes.footer1C}>
-            <h3>2. Connect with us</h3>
-            <div>
-              <button>
-                <span>
-                  <FaFacebookF />
-                </span>
-              </button>
-              <button>
-                <span>
-                  <FaTwitter />
-                </span>
-              </button>
-              <button>
-                <span>
-                  <FaYoutube />
-                </span>
-              </button>
-              <button>
-                <span>
-                  <FaInstagram />
-                </span>
-              </button>
-              <button>
-                <span>
-                  <FaLinkedinIn />
-                </span>
-              </button>
-              <button>
-                <span>
-                  <FaTiktok />
-                </span>
-              </button>
+          {/* Links */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 ">
+            <div className="">
+              <div className="py-8 px-4 ">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+                  Company
+                </h1>
+                <ul className={`flex flex-col gap-3`}>
+                  {FooterLinks.map((link) => (
+                    <li
+                      key={link.title}
+                      className="cursor-pointer duration-300 hover:text-blueColor text-gray "
+                    >
+                      <Link href={link.link}>
+                        <span>{link.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="">
+              <div className="py-8 px-4 ">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+                  Help
+                </h1>
+                <ul className="flex flex-col gap-3">
+                  {HelpLinks.map((link) => (
+                    <li
+                      key={link.title}
+                      className="cursor-pointer duration-300 hover:text-blueColor text-gray "
+                    >
+                      <Link href={link.link}>
+                        <span>{link.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="">
+              <div className="py-8 px-4 ">
+                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
+                  Resources
+                </h1>
+                <ul className="flex flex-col gap-3">
+                  {ResourcesLinks.map((link) => (
+                    <li
+                      key={link.title}
+                      className="cursor-pointer duration-300 hover:text-blueColor text-gray "
+                    >
+                      <Link href={link.link}>
+                        <span>{link.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div className={classes.footer2}>
-          <div>© 2023 Gammal Tech</div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
-}
+};
+
 export default Footer;

@@ -1,13 +1,11 @@
 import MainNavigation from "../header/MainNavigation";
-import classes from "./Layout.module.css";
 import Footer from "../footer/Footer";
 
 function Layout(props) {
   return (
-    <div>
-      
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden">
       <MainNavigation />
-      <main className={classes.body}>{props.children}</main>
+      <main className="my-12 py-4">{props.children}</main>
       <Footer />
     </div>
   );

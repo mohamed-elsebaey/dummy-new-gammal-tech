@@ -1,15 +1,16 @@
-import Link from "next/link";
-import classes from "./HomePage.module.css";
+import React from "react";
+import Hero from "./Hero/Hero";
+import Companies from "./Companies/Companies";
+import Products from "./Products/Products";
+
 function HomePage() {
   return (
-    <section className={classes.homePageSection}>
-      <div className={classes.homePageContainer}>
-        <h1>Welcome to the New Gammal Tech!</h1>
-        <div className={classes.homePageButton}>
-          <Link href="">Visit the homepage</Link>
-        </div>
-      </div>
-    </section>
+    <>
+      <Hero />
+      <Companies />
+      <Products/>
+    </>
   );
 }
+
 export default HomePage;

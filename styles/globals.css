@@ -1,14 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-style: normal;
-  font-size: 17px;
-  font-family: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-a {
-  color: inherit;
-  text-decoration: none;
+/* To rotate photo */
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: "Nunito", "Sans";
 }
